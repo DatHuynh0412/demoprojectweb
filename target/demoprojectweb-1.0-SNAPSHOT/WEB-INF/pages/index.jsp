@@ -23,21 +23,17 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">TravelLoca</a>
+                <a class="navbar-brand" href="<c:url value="/" />">Travel</a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/demoprojectweb/Tour">Tour</a>
-                    </li>
-
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search..." aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button> 
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+                    <a class="btn btn-outline-success my-2 my-sm-0">Register</a> 
+                    <a class="btn btn-outline-success my-2 my-sm-0" href="<c:url value="/login" />">Login</a>
                 </form>
             </div>
         </nav>
@@ -46,17 +42,20 @@
         <div class="container">
             <h1 class="text-center text-info">TOUR LIST</h1>
             <div class="row">
-                <c:forEach items="Tour" var = "tour">
+                <c:forEach items="${Tour}" var = "tour">
                 <div class="col-md-4 col-sm-12">
                     <div class="card">
                         <img class="card-img-top" src="${tour.image}" alt="Card image" width="250" height="300">
                         <div class="card-body">
-                            <h4 class="card-title">${tour.tourName}</h4>
-                            <p class="card-text">${tour.price}</p>
+                            <h4 class="card-title">${tour.name}</h4>
+                            <p class="card-text">${tour.price}$</p>
                             <a href="#" class="btn btn-primary">See Detail</a>
                             <a href="#" class="btn btn-danger">Booking Tour</a>
+                            <a href="<c:url value = "/${tour.id}/edit"/>" class="btn btn-danger">Edit</a>
+                            <a href="<c:url value = "/${tour.id}/delete"/>" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
+                    <br>        
                 </div>
                 </c:forEach>
             </div>

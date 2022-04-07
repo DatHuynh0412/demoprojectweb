@@ -7,6 +7,11 @@
     <class>com.dht.pojo.Commentinformation</class>
     <class>com.dht.pojo.Category</class>
     <class>com.dht.pojo.Tickettype</class>
+    <class>com.dht.pojo.News</class>
+    <class>com.dht.pojo.User</class>
+    <class>com.dht.pojo.Booking</class>
+    <class>com.dht.pojo.Tour</class>
+    <class>com.dht.pojo.Comment</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3308/travel?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
