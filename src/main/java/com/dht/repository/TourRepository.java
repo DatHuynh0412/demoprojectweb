@@ -4,7 +4,7 @@
  */
 package com.dht.repository;
 
-import com.dht.pojo.Tourinformation;
+import com.dht.pojo.Tour;
 import java.util.List;
 
 /**
@@ -12,5 +12,9 @@ import java.util.List;
  * @author huynh
  */
 public interface TourRepository {
-    List<Tourinformation> getTour(String kw);
+    List<Tour> getTour(String kw);
+    void addTour(Tour tour);
+    Tour getTourById(Integer id);
+    void editTour(Tour tour);
+    void deleteTour(Tour tour);
 }

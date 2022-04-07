@@ -23,7 +23,7 @@
             <h1 style="color: red;">${msg}</h1>
         </c:if>
           
-        <form:form method="post" action="/demoprojectweb/login" modelAttribute="user" >
+        <form:form method="post" action="/demoprojectweb/login" modelAttribute="User" >
             Username: <form:input path="username" />
             Password: <form:password path="password"/>
            <input type="submit" value="Login" />
